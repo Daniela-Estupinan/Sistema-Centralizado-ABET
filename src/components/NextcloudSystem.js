@@ -100,8 +100,9 @@ const NextcloudSystem = () => {
             value={newFile.size}
             onChange={(e) => setNewFile({ ...newFile, size: e.target.value })}
           />
+          </form>
           <button onClick={handleUploadFile}>Subir</button>
-        </form>
+        
       </div>
 
       {/* Lista de archivos */}

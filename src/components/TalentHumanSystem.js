@@ -4,7 +4,7 @@ const TalentHumanSystem = () => {
   const [users, setUsers] = useState([
     { id: 1, name: 'John Doe', position: 'Developer' },
     { id: 2, name: 'Jane Smith', position: 'Designer' },
-    // Más usuarios aquí...
+
   ]);
 
   const [newUser, setNewUser] = useState({
@@ -13,15 +13,11 @@ const TalentHumanSystem = () => {
   });
 
   const handleCreateUser = () => {
-    // Aquí podrías implementar la lógica para enviar el nuevo usuario a la API o base de datos
-    // Por ahora, solo agregamos el nuevo usuario a la lista de usuarios locales
     setUsers([...users, { ...newUser, id: users.length + 1 }]);
     setNewUser({ name: '', position: '' });
   };
 
   const handleDeleteUser = (id) => {
-    // Aquí podrías implementar la lógica para eliminar el usuario de la API o base de datos
-    // Por ahora, solo filtramos la lista de usuarios locales
     const updatedUsers = users.filter((user) => user.id !== id);
     setUsers(updatedUsers);
   };

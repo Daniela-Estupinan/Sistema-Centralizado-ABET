@@ -41,19 +41,17 @@ const DomainServerSystem = () => {
           }
 
           button {
-            padding: 10px 20px;
+            padding: 10px;
             background-color: #4caf50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 16px;
           }
 
           button:hover {
             background-color: #45a049;
           }
-
 
           /* Estilos para la lista de usuarios */
           ul {
@@ -104,8 +102,9 @@ const DomainServerSystem = () => {
             <option value="user">Usuario</option>
             <option value="admin">Administrador</option>
           </select>
+          </form>
           <button onClick={handleCreateUser}>Crear</button>
-        </form>
+        
       </div>
 
       {/* Lista de usuarios */}

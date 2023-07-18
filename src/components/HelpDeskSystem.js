@@ -136,8 +136,9 @@ const HelpDeskSystem = () => {
             value={newTicket.assignee}
             onChange={(e) => setNewTicket({ ...newTicket, assignee: e.target.value })}
           />
+          </form>
           <button onClick={handleCreateTicket}>Crear</button>
-        </form>
+        
       </div>
 
       {/* Lista de tickets */}

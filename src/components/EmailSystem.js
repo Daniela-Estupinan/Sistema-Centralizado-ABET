@@ -27,12 +27,7 @@ const EmailSystem = () => {
     setNewEmail({ sender: '', subject: '', body: '' });
   };
 
-  const handleEditEmail = (id, updatedEmail) => {
-    const updatedEmails = emails.map((email) =>
-      email.id === id ? { ...email, ...updatedEmail } : email
-    );
-    setEmails(updatedEmails);
-  };
+
 
   const handleDeleteEmail = (id) => {
     const updatedEmails = emails.filter((email) => email.id !== id);
@@ -116,7 +111,7 @@ const EmailSystem = () => {
 
       {/* Formulario para crear/editar un nuevo correo */}
       <div>
-        <h3>Crear/Editar Correo</h3>
+        <h3>Crear Correo</h3>
         <form>
           <input
             type="text"
@@ -150,7 +145,6 @@ const EmailSystem = () => {
               <strong>Asunto:</strong> {email.subject}
               <br />
               <p>{email.body}</p>
-              <button onClick={() => handleEditEmail(email.id, { sender: 'edited@example.com' })}>Editar</button>
               <button onClick={() => handleDeleteEmail(email.id)}>Eliminar</button>
             </li>
           ))}
